@@ -20,6 +20,7 @@ function BookList() {
         {books.map((book) => (
           <li key={book.book_id}>
             <Book book={book} />
+            <Link to={`/books/${book.id}`}>{book.name}</Link>
           </li>
         ))}
       </ul>
