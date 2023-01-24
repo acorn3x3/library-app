@@ -15,7 +15,7 @@ function BookList() {
   return (
     <>
       <h1>Book List</h1>
-      <Link to="/books">Return to Books Page</Link>
+      <Link to="/">Return to Home</Link>
 
       <ul className="book-list" aria-label="book list">
         {books.map((book) => (

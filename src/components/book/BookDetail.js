@@ -21,7 +21,7 @@ function BookDetail() {
     <div>
       {' '}
       <Book book={book} showDetail />
-      <Link to="/books">Back to list of Books</Link>
+      <Link to="/">Back to list of Books</Link>
     </div>
   );
 }
