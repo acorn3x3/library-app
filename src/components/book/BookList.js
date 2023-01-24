@@ -1,13 +1,14 @@
 import Book from '../../components/book/Book';
 import { useBooks } from '../../hooks/useBooks';
 import { Link } from 'react-router-dom';
+import Author from '../author/Author';
 
 function BookList() {
   const { error, loading, books } = useBooks();
   if (error)
     return (
       <>
-        <h1>Something went wrong :(</h1> <h2>{error}</h2>
+        <h1>Something went wrong :( </h1> <h2>{error}</h2>
       </>
     );
   if (loading) return <h1>Loading books...</h1>;
@@ -19,8 +20,10 @@ function BookList() {
       <ul className="book-list" aria-label="book list">
         {books.map((book) => (
           <li key={book.book_id}>
-            <Book book={book} />
-            <Link to={`/books/${book.id}`}>{book.name}</Link>
+            <Link to={`/books/${book.book_id}`}>
+              {' '}
+              <Book book={book}> </Book>
+            </Link>
           </li>
         ))}
       </ul>
